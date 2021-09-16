@@ -1,2 +1,2 @@
-# goit-markup-hw-02
-homework #2 goit course FULLSTACK42
+# FullStackGoITHomework1
+repository for homework #1 (the first) of FullStack course from GoIt 
