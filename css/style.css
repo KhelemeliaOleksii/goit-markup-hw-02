@@ -1,22 +1,28 @@
 :root{
-    --first-title-fonts-color: #FFFFFF;
-    --second-title-fonts-color: #212121;
-    --third-title-fonts-color: #212121;
+/*fonts colours */
+    --body-fonts-main-color: #212121;
+    --body-fonts-onbackgraund-color: #FFFFFF;
     --general-text-fonts-color: #757575;
-    --logo-header-first-color: #2196F3;
+    --logo-first-color: #2196F3;
     --logo-header-second-color: #000000;
-    --navlink-fonts-color: #212121;
-    --telmail-header-fonts-color: #757575;
-    --hover-navlink-fonts-color: #2196F3;
-    --hero-button-text-color: #FFFFFF;
-    --logo-footer-first-color: #2196F3;
     --logo-footer-second-color: #FFFFFF;
+    --active-btn-fonts-color: #FFFFFF;
+    --active-link-fonts-color: #2196F3;
+/*background colours */   
+    --body-background-main-color:#E5E5E5;
+    --header-background-color: #FFFFFF;
     --hero-background-color: #2F303A;
-    --telmail-footer-fonts-color: #FFFFFF;
+    --hero-btn-background-color: #2196F3;
+    --body-additional-color: #F5F4FA;
+    --footer-background-color: #2F303A;
+    --active-btn-background-color: #2196F3;
+    --cards-background-color: #FFFFFF;
 }
 
 body{
     font-family: Roboto, sans-serif;
+    color: var(--body-fonts-main-color);
+    background-color: var(--body-background-main-color);
 }
 
 .link-no-tdn {
@@ -27,13 +33,16 @@ body{
 }
 
 /*------------HEADER-------------*/
+.header{
+    background-color: var(--header-background-color);
+}
 .header-logo {
     font-family: Raleway;
     font-weight: 700;
     font-size: 26px;
     line-height: calc(31 / 26);
     letter-spacing: 0.03em; 
-    color: var(--logo-header-first-color);
+    color: var(--logo-first-color);
 }
 
 .header-post-logo {
@@ -45,11 +54,11 @@ body{
     font-size: 14px;
     line-height: calc(16 / 14);
     letter-spacing: 0.02em;
-    color: var(--navlink-fonts-color);
+    color:inherit;
 }
 
 .header-link:hover, .header-link:focus {
-    color: var(--hover-navlink-fonts-color);
+    color: var(--active-link-fonts-color);
 }
 
 .header-telmail-link {
@@ -57,10 +66,10 @@ body{
     font-size: 14px;
     line-height: calc(16 / 14);
     letter-spacing: 0.02em;
-    color: var(--telmail-header-fonts-color);
+    color: var(--general-text-fonts-color);
 }
 .header-telmail-link:hover, .header-telmail-link:focus {
-    color: var(--hover-navlink-fonts-color);
+    color: var(--active-link-fonts-color);
 }
 
 /*------------------BODY-------------------*/
@@ -74,9 +83,10 @@ body{
     text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-    color: var(--first-title-fonts-color);
+    color: var(--body-fonts-onbackgraund-color);
 }
 .hero-button {
+    cursor: pointer;
     font-family: inherit;
     font-weight: 700;
     font-size: 16px;
@@ -85,8 +95,8 @@ body{
     align-items: center;
     text-align: center;
     letter-spacing: 0.06em;
-    color: var(--hero-button-text-color);
-    background-color: #2196F3;
+    color: var(--body-fonts-onbackgraund-color);
+    background-color: var(--hero-btn-background-color);
 }
 
 .superiority-title{
@@ -95,7 +105,6 @@ body{
     line-height: calc(16 / 14);
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    color: var(--second-title-fonts-color);
 }
 .superiority-after-title {
     font-weight: 400;
@@ -111,16 +120,21 @@ body{
     line-height: calc(42 / 36);
     text-align: center;
     letter-spacing: 0.03em;
-    color: var(--second-title-fonts-color);    
 }
 
+.team {
+    background-color: var(--body-additional-color);
+}
+
+.team-items {
+    background-color: var(--cards-background-color);
+}
 .team-title {
     font-weight: 700;
     font-size: 36px;
     line-height: calc(42 / 36);
     text-align: center;
     letter-spacing: 0.03em;
-    color: var(--second-title-fonts-color);
 }
 
 .team-member-names {
@@ -129,7 +143,6 @@ body{
     line-height: calc(19 / 16);
     text-align: center;
     letter-spacing: 0.03em;
-    color: var(--third-title-fonts-color);
 }
 
 .team-member-positions {
@@ -143,7 +156,7 @@ body{
 
 /*-----------------FOOTER------------------*/
 .footer{
-    background-color: #2F303A;
+    background-color: var(--footer-background-color);
 }
 .footer-logo {
     font-family: Raleway;
@@ -151,7 +164,7 @@ body{
     font-size: 26px;
     line-height: calc(31 / 26);
     letter-spacing: 0.03em; 
-    color: var(--logo-footer-first-color);
+    color: var(--logo-first-color);
 }
 .footer-post-logo {
     font-family: Raleway;
@@ -167,33 +180,42 @@ body{
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
-    color: var(--telmail-footer-fonts-color);
+    color: var(--body-fonts-onbackgraund-color);
 }
+.address-link:hover, .address-link:focus{
+    color: var(--active-link-fonts-color);
+}
+
 .address-telmail-link{
     color: rgba(255, 255, 255, 0.6);
 }
 
 /*---------------PORTFOLIO-----------------*/
 .product-list-btn {
+    cursor: pointer;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.62;
     text-align: center;
     letter-spacing: 0.03em;
-    color: var(--third-title-fonts-color);
-    background-color: #F5F4FA;
+    color:inherit;
+    background-color: var(--body-additional-color);
 }
 .product-list-btn:hover, .product-list-btn:focus {
-    color: var(--hero-button-text-color);
-    background-color: var(--hover-navlink-fonts-color);    
+    color: var(--active-btn-fonts-color);
+    background-color: var(--active-btn-background-color);     
 }  
+
+.products-example-link {
+    background-color: var(--cards-background-color);
+}
 
 .products-example-partner {
     font-weight: 700;
     font-size: 18px;
     line-height: 2;
     letter-spacing: 0.06em;
-    color: var(--third-title-fonts-color);
+    color: var(--body-fonts-main-color);
 }
 
 .products-example-type {
