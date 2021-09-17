@@ -19,7 +19,7 @@
     --cards-background-color: #FFFFFF;
 }
 
-body{
+body {
     font-family: Roboto, sans-serif;
     color: var(--body-fonts-main-color);
     background-color: var(--body-background-main-color);
@@ -55,6 +55,11 @@ body{
     line-height: calc(16 / 14);
     letter-spacing: 0.02em;
     color:inherit;
+}
+
+.current-page-link {
+    color: var(--body-fonts-onbackgraund-color);
+    background-color: var(--active-link-fonts-color);
 }
 
 .header-link:hover, .header-link:focus {
@@ -225,3 +230,5 @@ body{
     letter-spacing: 0.03em;
     color: var(--general-text-fonts-color);
 }
+
+
